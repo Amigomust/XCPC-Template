@@ -1,0 +1,256 @@
+\PassOptionsToPackage{quiet}{fontspec}
+\documentclass[UTF8, a4paper, titlepage, twoside]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{nccmath}
+\usepackage{ntheorem}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{minted}  % use for bash
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+
+\geometry{left=2.5cm, right=1.5cm, top = 1.5cm, bottom = 1.5cm}
+
+% ------------------------------子章节设置------------------------------
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% ------------------------------代码框设置------------------------------
+
+\lstset{
+  numbers           = left,                                 % 左侧行号
+  columns           = fixed,                                %
+  showtabs          = false,                                % 不显示tab符号
+  showspaces        = false,                                % 不显示space符号
+  breakindent       = 2em,                                  % 自动换行平移距离
+  tabsize           = 4,                                    % tab长度
+  rulesepcolor      = \color[RGB]{20,20,20},                % 边框颜色
+  mathescape        = false,                                % 显示LaTex公式
+  escapeinside      = {(*@}{@*)},                           %
+% lineskip          = 0.0em,                                %
+  basewidth         = 0.5em,                                %
+  xleftmargin       = 0.5em,                                %
+  xrightmargin      = 0.0em,                                %
+  aboveskip         = 1.0em,                                %
+  belowskip         = 0.5em,                                %
+}
+\lstdefinestyle{cpp}{
+  language          = c++,                                  %
+  tabsize           = 4,                                    % tab长度
+  basicstyle        = \linespread{0.75}\small\ttfamily,     % 基本格式
+  keywordstyle      = \color{blue}\bfseries,                % 关键词格式
+  commentstyle      = \color{Sepia},                        % 注释格式
+  stringstyle       = \color{violet}\slshape,               % 字符串格式
+  numberstyle       = \color{darkgray},                     % 行号格式
+  showstringspaces  = false,                                % 不显示字符串中的space符号
+  frame             = single,                               % 边框类型
+  breaklines        = true,                                 % 过长自动换行
+  morekeywords      = {  
+    int, LL, UI, ULL, i128, PII, PIL, PLI, PLL, vi, vvi,    %
+    vl, vvl, vpi                                            %
+    decltype, nullptr, size_t, int8_t, uint8_t, int16_t,    %
+    uint16_t, int32_t, uint32_t, int64_t, uint64_t, ifdef,  %
+    ifndef, endif, constexpr,                               %
+  },                                                        % 额外关键词
+  emphstyle         = \color[RGB]{16,128,16},               % 额外高亮颜色
+  emph              = {                                     %
+    std, vector, set, map, unordered_set, unordered_map,    %
+    array, queue, dequeue, priority_queue, cin, cout, cerr, %
+    fill, fill_n, sort, lower_bound, upper_bound, less,	    %
+    greater, enable_if, enable_if_t, min, max, merge,       %
+    clear, resize, push, push_back, push_front, pop, top,   %
+    pop_back, pop_front, size, front, back, data, begin,    %
+    end, iterator, pair, tuple, endl, istream, ostream,     %
+    flush, list, first, second, left, right, rotate, find,  %
+    assign, __gnu_cxx, __gnu_pbds, accumulate, allocator,   %
+    at, string, complex, mt19937, mt19937_64, insert,       %
+    emplace, emplace_back, hash, min_element, max_element,  %
+    count, multiset, next_premutation, pre_premutation,     %
+    ios, stable_sort, remove, regex, stack, sin, cos, tan,  %
+    asin, acos, atan, hypot, abs, sqrt, printf, scanf,      %
+    fabs, reverse, unique, plus, minus, swap, optional,     %
+    numeric_limits, erase, partial_sum, move, tie,          %
+    sync_with_stdio,                                        % 额外高亮词
+  },
+}
+\lstdefinestyle{shell}{
+  language          = bash,                                 %
+  tabsize           = 4,                                    % tab长度
+  basicstyle        = \linespread{0.75}\small\ttfamily,     % 基本格式
+  keywordstyle      = \color{blue}\bfseries,                % 关键词格式
+  commentstyle      = \color{Sepia},                        % 注释格式
+% stringstyle       = \color{violet}\slshape,               % 字符串格式
+  numberstyle       = \color{darkgray},                     % 行号格式
+  showstringspaces  = false,                                % 不显示字符串中的space符号
+  frame             = single,                               % 边框类型
+  breaklines        = true,                                 % 过长自动换行
+}
+
+%\AtBeginEnvironment{align*}{\useshortskip}
+
+\AtBeginDocument{
+	\setlength{\abovedisplayskip}{0.2em}
+	\setlength{\belowdisplayskip}{0.2em}
+%	\setlength{\abovedisplayshortskip}{0em}
+%	\setlength{\belowdisplayshortskip}{0em}
+	\setlength{\parskip}{0.5em}
+	\setitemize{
+		topsep		=	0.0em,
+		itemsep		=	0.0em,
+		partopsep	=	0.0em,
+		parsep		=	\parskip
+	}
+}
+
+\title{	
+	\normalfont\normalsize
+ %        \begin{center}
+ %            \includegraphics[width=0.6\columnwidth]{logo.png}
+ %        \end{center}
+	\textsc{Beijing Normal University \\ School of Mathematics}\\ 
+	\vspace{25pt} 
+	\rule{\linewidth}{0.5pt}\\ 
+	\vspace{20pt} 
+	{\Huge Template}\\ 
+	\vspace{12pt} 
+	\rule{\linewidth}{2pt}\\ 
+	\vspace{12pt} 
+}
+
+\author{\LARGE app1eDog} 
+\date{\normalsize\today} 
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{ hpp }
+\subsection{ heading }
+\begin{lstlisting}[style=cpp]
+#include <bits/stdc++.h>
+
+// using namespace std;
+
+#define typet typename T
+#define typeu typename U
+#define types typename... Ts
+#define tempt template <typet>
+#define tempu template <typeu>
+#define temps template <types>
+#define tandu template <typet, typeu>
+
+using LL = long long;
+using i128 = __int128;
+using PII = std::pair<int, int>;
+/*
+using UI = unsigned int;
+using ULL = unsigned long long;
+using ULL = unsigned long long;
+using PIL = std::pair<int, LL>;
+using PLI = std::pair<LL, int>;
+using PLL = std::pair<LL, LL>;
+*/
+using vi = std::vector<int>;
+using vvi = std::vector<vi>;
+using vl = std::vector<LL>;
+using vvl = std::vector<vl>;
+using vpi = std::vector<PII>;
+
+#define ff first
+#define ss second
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+
+#ifdef LOCAL
+#include "../debug.h"
+#else
+#define debug(...) \
+    do {           \
+    } while (false)
+#endif
+
+constexpr int mod = 998244353;
+constexpr int inv2 = (mod + 1) / 2;
+constexpr int inf = 0x3f3f3f3f;
+constexpr LL INF = 1e18;
+constexpr double pi = 3.141592653589793;
+constexpr double eps = 1e-6;
+
+constexpr int lowbit(int x) { return x & -x; }
+/*
+constexpr int add(int x, int y) { return x + y < mod ? x + y : x - mod + y; }
+constexpr int sub(int x, int y) { return x < y ? mod + x - y : x - y; }
+constexpr int mul(LL x, int y) { return x * y % mod; }
+constexpr void Add(int& x, int y) { x = add(x, y); }
+constexpr void Sub(int& x, int y) { x = sub(x, y); }
+constexpr void Mul(int& x, int y) { x = mul(x, y); }
+constexpr int pow(int x, int y, int z = 1) {
+    for (; y; y /= 2) {
+        if (y & 1) Mul(z, x);
+        Mul(x, x);
+    }
+    return z;
+}
+temps constexpr int add(Ts... x) {
+    int y = 0;
+    (..., Add(y, x));
+    return y;
+}
+temps constexpr int mul(Ts... x) {
+    int y = 1;
+    (..., Mul(y, x));
+    return y;
+}
+*/
+
+tandu bool Max(T& x, const U& y) { return x < y ? x = y, true : false; }
+tandu bool Min(T& x, const U& y) { return x > y ? x = y, true : false; }
+
+void solut() {
+    
+}
+
+int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(0);
+    std::cout.tie(0);
+
+    int t = 1;
+    std::cin >> t;
+    while (t--) {
+        solut();
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{ debug.h }
+\lstinputlisting[style=cpp]{hpp/debug.h}
+
+\subsection { mod int }
+\lstinputlisting[style=cpp]{hpp/mint.cpp}
+
+\newpage
+\section{ Shell Scripts }
+
+\subsection{ checker.sh }
+
+Linux version.
+\lstinputlisting[style=shell]{ shell_scripts/checker.sh }
+
+Windows version.
+\lstinputlisting[style=shell]{ shell_scripts/checker.bat }
+
+
+\end{document}
