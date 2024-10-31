@@ -85,6 +85,18 @@
     sync_with_stdio,                                        % 额外高亮词
   },
 }
+\lstdefinestyle{shell}{
+  language          = bash,                                 %
+  tabsize           = 4,                                    % tab长度
+  basicstyle        = \linespread{0.75}\small\ttfamily,     % 基本格式
+  keywordstyle      = \color{blue}\bfseries,                % 关键词格式
+  commentstyle      = \color{Sepia},                        % 注释格式
+% stringstyle       = \color{violet}\slshape,               % 字符串格式
+  numberstyle       = \color{darkgray},                     % 行号格式
+  showstringspaces  = false,                                % 不显示字符串中的space符号
+  frame             = single,                               % 边框类型
+  breaklines        = true,                                 % 过长自动换行
+}
 
 %\AtBeginEnvironment{align*}{\useshortskip}
 
@@ -127,220 +139,26 @@
 \newpage
 \section{ hpp }
 \subsection{ heading }
-\begin{lstlisting}[style=cpp]
-#include <bits/stdc++.h>
-using namespace std;
-
-using ll = long long;
-using i128 = __int128;
-using pii = std::pair<int, int>;
-
-#define ff first
-#define ss second
-#define all(v) v.begin(), v.end()
-
-#ifdef LOCAL
-#include "debug.h"
-#else
-#define debug(...) \
-    do {           \
-    } while (false)
-#endif
-
-void solut() {
-    
-}
-
-int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(0);
-
-    int t = 1;
-    std::cin >> t;
-    while (t--) {
-        solut();
-    }
-    return 0;
-}
-\end{lstlisting}
+\lstinputlisting[style=cpp]{hpp/heading.cpp}
 
 \subsection{ debug.h }
-md5 为: 
-\begin{lstlisting}[style=cpp]
-template <typename T, typename U> std::ostream& operator<<(std::ostream& os, const std::pair<T, U>& p) {
-    return os << '<' << p.first << ',' << p.second << '>';
-}
-
-template <
-    typename T, typename = decltype(std::begin(std::declval<T>())),
-    typename = std::enable_if_t<!std::is_same_v<T, std::string>>>
-std::ostream& operator<<(std::ostream& os, const T& c) {
-    auto it = std::begin(c);
-    if (it == std::end(c)) return os << "{}";
-    for (os << '{' << *it; ++it != std::end(c); os << ',' << *it)
-        ;
-    return os << '}';
-}
-
-#define debug(arg...)                \
-    do {                             \
-        std::cerr << "[" #arg "] :"; \
-        dbg(arg);                    \
-    } while (false)
-
-template<typename... Ts> void dbg(Ts... args) {
-    (..., (std::cerr << ' ' << args));
-    std::cerr << std::endl;
-}
-\end{lstlisting}
+\lstinputlisting[style=cpp]{hpp/debug.h}
 
 \newpage
-
-\subsection { \(F_p\) }
-\begin{lstlisting}[style=cpp]
-template <int P>
-struct Mint {
-    int v = 0;
-
-    // reflection
-    template <typet = int>
-    constexpr operator T() const {
-        return v;
-    }
-
-    // constructor //
-    constexpr Mint() = default;
-    template <typet>
-    constexpr Mint(T x) : v(x % P) {}
-    constexpr int val() const { return v; }
-    constexpr int mod() { return P; }
-
-    // io //
-    friend std::istream& operator>>(std::istream& is, Mint& x) {
-        LL y;
-        is >> y;
-        x = y;
-        return is;
-    }
-    friend std::ostream& operator<<(std::ostream& os, Mint x) { return os << x.v; }
-
-    // comparision //
-    friend constexpr bool operator==(const Mint& lhs, const Mint& rhs) { return lhs.v == rhs.v; }
-    friend constexpr bool operator!=(const Mint& lhs, const Mint& rhs) { return lhs.v != rhs.v; }
-    friend constexpr bool operator<(const Mint& lhs, const Mint& rhs) { return lhs.v < rhs.v; }
-    friend constexpr bool operator<=(const Mint& lhs, const Mint& rhs) { return lhs.v <= rhs.v; }
-    friend constexpr bool operator>(const Mint& lhs, const Mint& rhs) { return lhs.v > rhs.v; }
-    friend constexpr bool operator>=(const Mint& lhs, const Mint& rhs) { return lhs.v >= rhs.v; }
-
-    // arithmetic //
-    template <typet>
-    friend constexpr Mint power(Mint a, T n) {
-        Mint ans = 1;
-        while (n) {
-            if (n & 1) ans *= a;
-            a *= a;
-            n >>= 1;
-        }
-        return ans;
-    }
-    friend constexpr Mint inv(const Mint& rhs) { return power(rhs, P - 2); }
-    friend constexpr Mint operator+(const Mint& lhs, const Mint& rhs) {
-        return lhs.val() + rhs.val() < P ? lhs.val() + rhs.val() : lhs.val() - P + rhs.val();
-    }
-    friend constexpr Mint operator-(const Mint& lhs, const Mint& rhs) {
-        return lhs.val() < rhs.val() ? lhs.val() + P - rhs.val() : lhs.val() - rhs.val();
-    }
-    friend constexpr Mint operator*(const Mint& lhs, const Mint& rhs) {
-        return static_cast<LL>(lhs.val()) * rhs.val() % P;
-    }
-    friend constexpr Mint operator/(const Mint& lhs, const Mint& rhs) { return lhs * inv(rhs); }
-    Mint operator+() const { return *this; }
-    Mint operator-() const { return Mint() - *this; }
-    constexpr Mint& operator++() {
-        v++;
-        if (v == P) v = 0;
-        return *this;
-    }
-    constexpr Mint& operator--() {
-        if (v == 0) v = P;
-        v--;
-        return *this;
-    }
-    constexpr Mint& operator++(int) {
-        Mint ans = *this;
-        ++*this;
-        return ans;
-    }
-    constexpr Mint operator--(int) {
-        Mint ans = *this;
-        --*this;
-        return ans;
-    }
-    constexpr Mint& operator+=(const Mint& rhs) {
-        v = v + rhs;
-        return *this;
-    }
-    constexpr Mint& operator-=(const Mint& rhs) {
-        v = v - rhs;
-        return *this;
-    }
-    constexpr Mint& operator*=(const Mint& rhs) {
-        v = v * rhs;
-        return *this;
-    }
-    constexpr Mint& operator/=(const Mint& rhs) {
-        v = v / rhs;
-        return *this;
-    }
-};
-using Z = Mint<998244353>;
-\end{lstlisting}
-
-\newpage
-\section{ shell scripts }
-\subsection{ md5er.sh }
-得到一份 cpp 代码的 MD5 码.
-
-\begin{center}
-	\includegraphics[width=12cm]{graphs/md5er.png}
-\end{center}
-
-\subsection{ formater.sh }
-
-修改 .out 以及 .ans 的格式:
-
-\begin{center}
-	\includegraphics[width=12cm]{graphs/formater.png}
-\end{center}
+\section{ Shell Scripts }
 
 \subsection{ checker.sh }
-对一份代码跑所有测试样例并比对.
 
-\begin{lstlisting}[
-basicstyle=\consolas
-]
-#!/bin/bash
+Linux version.
+\lstinputlisting[style=shell]{ shell_scripts/checker.sh }
 
-# current=${pwd}
-cd "$1"
-
-g++ -o main -O2 -std=c++17 -DLOCAL main.cpp -ftrapv -fsanitize=address,undefined
-for input in *.in; do 
-    output=${input%.*}.out
-    answer=${input%.*}.ans
-    
-    ./main < $input > $output
-
-    echo "case ${input%.*}: "
-    echo "My: "
-    cat $output
-    echo "Answer: "
-    cat $answer
-
-done
-\end{lstlisting}
+Windows version.
+\lstinputlisting[style=shell]{ shell_scripts/checker.bat }
 
 \newpage
+\section{ mod int }
+\lstinputlisting[style=cpp]{hpp/mint.cpp}
+
 \section{ data structure }
 
 \subsection{ stack }
@@ -467,7 +285,7 @@ for (int i = 1; i <= n; i++) {
 
 \subsection{ segement tree czr }
 区间加，区间赋值，区间求和，区间最大值
-\lstinputlisting[stylecpp]{data_structure/segtree_czr.cpp}
+\lstinputlisting[style=cpp]{data_structure/segtree_czr.cpp}
 
 \subsection{ segment tree }
 \subsubsection*{ 维护半群 }
@@ -7009,9 +6827,9 @@ struct Dinic {
 \subsubsection*{ HLPP }
 抄板子吧, 别管原理了, 留一个图吧.
 
-\begin{center}
-	\includegraphics[width=9cm]{graphs/hhlp.png}
-\end{center}
+% \begin{center}
+% 	\includegraphics[width=9cm]{graphs/hhlp.png}
+% \end{center}
 
 \begin{lstlisting}[style=cpp]
 struct HLPP {

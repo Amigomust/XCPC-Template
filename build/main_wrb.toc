@@ -1,0 +1,98 @@
+\contentsline {section}{\numberline {1} hpp }{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1} heading }{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2} debug.h }{7}{subsection.1.2}%
+\contentsline {section}{\numberline {2} Shell Scripts }{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1} checker.sh }{8}{subsection.2.1}%
+\contentsline {section}{\numberline {3} mod int }{9}{section.3}%
+\contentsline {section}{\numberline {4} data structure }{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1} stack }{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2} queue }{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3} DSU }{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4} ST }{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5} cartesian tree }{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6} segement tree czr }{12}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7} segment tree }{13}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8} hjt segment tree }{20}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9} LiChao Tree }{23}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10} treap }{23}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11} splay }{28}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12} Link Cut Tree }{32}{subsection.4.12}%
+\contentsline {subsection}{\numberline {4.13} ODT }{32}{subsection.4.13}%
+\contentsline {subsection}{\numberline {4.14} tree in tree }{32}{subsection.4.14}%
+\contentsline {subsection}{\numberline {4.15} heap }{39}{subsection.4.15}%
+\contentsline {section}{\numberline {5} string }{39}{section.5}%
+\contentsline {subsection}{\numberline {5.1} hash }{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2} Cantor Expansion }{40}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3} kmp }{40}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4} z function }{40}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5} Manacher }{41}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6} AC automaton }{41}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7} PAM }{41}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8} Suffix Array }{42}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9} trie }{42}{subsection.5.9}%
+\contentsline {section}{\numberline {6} math - number theory }{45}{section.6}%
+\contentsline {subsection}{\numberline {6.1} Eculid }{45}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2} inverse }{46}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3} sieve }{47}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4} 杜教筛 }{48}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5} extended Euler theorem }{48}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6} block }{48}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7} CRT \& exCRT }{49}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8} BSGS \& exBSGS }{50}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9} Miller Rabin }{50}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10} Pollard Rho }{51}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11} quadratic residu }{52}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12} Lucas }{52}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13} Wilson }{54}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14} LTE }{55}{subsection.6.14}%
+\contentsline {subsection}{\numberline {6.15} Mobius inversion}{56}{subsection.6.15}%
+\contentsline {section}{\numberline {7} math - polynomial }{57}{section.7}%
+\contentsline {subsection}{\numberline {7.1} FTT }{57}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2} FWT and FMT }{58}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3} class polynomial }{60}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4} wsy poly }{64}{subsection.7.4}%
+\contentsline {section}{\numberline {8} math - numerical analysis }{71}{section.8}%
+\contentsline {subsection}{\numberline {8.1} Simpson }{71}{subsection.8.1}%
+\contentsline {section}{\numberline {9} math - game theory }{72}{section.9}%
+\contentsline {subsection}{\numberline {9.1} nim game }{72}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2} anti - nim game }{72}{subsection.9.2}%
+\contentsline {section}{\numberline {10} math - linear algebra}{73}{section.10}%
+\contentsline {subsection}{\numberline {10.1} matrix }{73}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2} matrix tree }{74}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3} linear basis }{75}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4} berlekamp massey }{76}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5} linear programming }{77}{subsection.10.5}%
+\contentsline {section}{\numberline {11} math - complex number }{78}{section.11}%
+\contentsline {section}{\numberline {12} graph }{79}{section.12}%
+\contentsline {subsection}{\numberline {12.1} topsort }{79}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2} shortest path }{79}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3} minimum spanning tree }{83}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4} SCC }{83}{subsection.12.4}%
+\contentsline {subsubsection}{\numberline {12.4.1} 缩点 }{84}{subsubsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.5} DCC }{84}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6} 2 SAT }{87}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7} minimum ring }{88}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8} tree - center of gravity }{88}{subsection.12.8}%
+\contentsline {subsection}{\numberline {12.9} tree - DSU on tree }{88}{subsection.12.9}%
+\contentsline {subsection}{\numberline {12.10} tree - AHU }{89}{subsection.12.10}%
+\contentsline {subsection}{\numberline {12.11} tree - LCA }{90}{subsection.12.11}%
+\contentsline {subsection}{\numberline {12.12} tree - LLD }{90}{subsection.12.12}%
+\contentsline {subsection}{\numberline {12.13} tree - HLD }{91}{subsection.12.13}%
+\contentsline {subsection}{\numberline {12.14} tree - virtual tree }{92}{subsection.12.14}%
+\contentsline {subsection}{\numberline {12.15} tree - pseudo tree }{93}{subsection.12.15}%
+\contentsline {subsection}{\numberline {12.16} tree - prufer sequence }{94}{subsection.12.16}%
+\contentsline {subsection}{\numberline {12.17} tree - divide and conquer on tree }{94}{subsection.12.17}%
+\contentsline {subsection}{\numberline {12.18} network flow - maximal flow }{96}{subsection.12.18}%
+\contentsline {subsection}{\numberline {12.19} network flow - minimum cost flow }{99}{subsection.12.19}%
+\contentsline {subsection}{\numberline {12.20} network flow - minimal cut }{101}{subsection.12.20}%
+\contentsline {subsection}{\numberline {12.21} matching - matching on bipartite graph }{102}{subsection.12.21}%
+\contentsline {subsection}{\numberline {12.22} matching - matching on general graph }{104}{subsection.12.22}%
+\contentsline {section}{\numberline {13} geometry }{105}{section.13}%
+\contentsline {subsection}{\numberline {13.1} two demention }{105}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2} convex }{106}{subsection.13.2}%
+\contentsline {section}{\numberline {14} sweep line }{107}{section.14}%
+\contentsline {section}{\numberline {15} offline algorithm}{108}{section.15}%
+\contentsline {subsection}{\numberline {15.1} discretization }{108}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2} Mo algorithm }{108}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3} CDQ }{109}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4} 线段树分治 }{111}{subsection.15.4}%
